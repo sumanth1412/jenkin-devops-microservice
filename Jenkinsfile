@@ -6,6 +6,7 @@ pipeline {
 		dockerHome =tool 'myDocker'
 		mavenHome =tool 'myMaven'
 		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+		DOCKER_HOST = 'unix:///var/run/docker.sock'
 	}
  stages{
 		stage('Build'){
