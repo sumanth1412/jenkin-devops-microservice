@@ -10,8 +10,8 @@ pipeline {
  stages{
 		stage('Build'){
            steps{
-			sh 'mvn --verison'
-			sh 'docker verison'
+			sh 'mvn --version'
+			sh 'docker version'
 			echo "Build"
 		   }
 		}
@@ -30,10 +30,10 @@ pipeline {
 	
 	post{
 		always{
-			echo 'I am aweasome,I run always'
+			echo 'I am awesome,I run always'
 		}
 		success{
-			echo 'I run when you are succesful'
+			echo 'I run when you are successful'
 		}
 		failure{
 			echo 'I run when you fail'
