@@ -2,9 +2,16 @@
 pipeline {
 	agent any 
 	//agent { docker { image 'alpine:3.19'}}
+	environment{
+		dockerHome =tool 'myDocker'
+		mavenHome =tool 'myMaven'
+		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	}
  stages{
 		stage('Build'){
            steps{
+			sh 'mvn --verison'
+			sh 'docker verison'
 			echo "Build"
 		   }
 		}
