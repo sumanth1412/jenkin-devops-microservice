@@ -1,7 +1,7 @@
 //Declarative
 pipeline {
 	//agent any 
-	agent { docker { image 'node: alpine:3.19'}}
+	agent { docker { image 'alpine:3.19'}}
  stages{
 		stage('Build'){
            steps{
